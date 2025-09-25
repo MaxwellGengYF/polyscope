@@ -314,7 +314,7 @@ void pushContext(std::function<void()> callbackFunction, bool drawDefaultUI) {
   ImPlot::SetCurrentContext(newPlotContext);
   ImGui::GetIO().BackendPlatformUserData = nullptr;
   ImGui::GetIO().BackendRendererUserData = nullptr;
-
+  ImGui::DestroyPlatformWindows();
   ImPlot::DestroyContext(newPlotContext);
   ImGui::DestroyContext(newContext);
 
